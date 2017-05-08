@@ -45,5 +45,6 @@ module.exports = {
         dns: 'mock',
         net: 'mock'
     },
+
     devtool: 'source-map'
 }
