@@ -23,13 +23,15 @@ app.set('port', 3000);
 
 mongoose.connect('mongodb://root:root@ds133311.mlab.com:33311/hogwarts');
 
-
+// setup viewengine
+app.set('views', 'src/views');
+app.set('view engine', 'pug');
 
 
 
 
 app.get('/', (req, res) => {
-    res.json({ 'message': 'Hello World' });
+    res.render('hello', { title: 'Home' });
 });
 
 // route middleware to verify a token
