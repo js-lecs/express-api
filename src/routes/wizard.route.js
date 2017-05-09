@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         if (err)
             res.send(err);
 
-        res.json(wizards);
+        res.json({ data: wizards, decoded: req.decoded });
     });
 });
 
